@@ -1,0 +1,18 @@
+[package]
+name = "chadscript"
+version = "0.0.1"
+authors = ["silverbirder <silverbirder@gmail.com>", "Theo Paris <theop@flowtr.dev>"]
+edition = "2021"
+
+[[bin]]
+name = "chad"
+path = "./src/main.rs"
+
+[dependencies]
+inkwell = { git = "https://github.com/aditya-solana/inkwell", branch = "llvm-15" }
+swc_ecma_parser = { version = "0.122.26", features = ["typescript"] }
+swc_common = { version = "0.29.14", features = ["tty-emitter"] }
+swc_ecma_ast = "0.94.19"
+
+[features]
+default = ["inkwell/llvm14-0"]
